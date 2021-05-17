@@ -1,6 +1,7 @@
 \LoadClass[fontset=none]{article}
 
 \RequirePackage{ctex}
+\RequirePackage{xeCJK}
 \RequirePackage{graphicx}
 \RequirePackage{color}
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
@@ -39,9 +40,9 @@
 \renewcommand{\emph}[1]{\color[HTML]{F22F27}\textbf{#1}\color{black}}
 \newcommand{\spare}{\begin{center}\color[RGB]{231,231,231}\rule{\textwidth}{1.5pt}\end{center}}
 % 标题格式
-\titleformat{\section}[display]{\centering\zihao{1}\bfseries\color[HTML]{590009}}{\thesection}{0em}{}[]
-\titleformat{\subsection}[display]{\zihao{2}\bfseries}{\thesubsection}{0em}{\color[HTML]{F22F27}{\#}\,\color{black}}[\color{red}\hrule]
-\titleformat{\subsubsection}[display]{\zihao{3}\bfseries}{\thesubsubsection}{0em}{\color[HTML]{F22F27}\rule[-4pt]{3pt}{20pt}\,\,\color{black}}[]
+\titleformat{\section}[block]{\centering\zihao{1}\bfseries\color[HTML]{590009}}{\thesection\,\,}{0em}{}[]
+\titleformat{\subsection}[block]{\zihao{2}\bfseries}{\color[HTML]{F22F27}{\#}\,\color{black}\thesubsection\,\,}{0em}{}[\color{red}\hrule]
+\titleformat{\subsubsection}[block]{\zihao{3}\bfseries}{\color[HTML]{F22F27}\rule[-4pt]{3pt}{20pt}\,\,\color{black}\thesubsubsection\,\,}{0em}{}[]
 
 % 段间距
 \setlength{\parskip}{1em}
