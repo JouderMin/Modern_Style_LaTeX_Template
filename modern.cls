@@ -1,7 +1,6 @@
 \LoadClass[fontset=none]{article}
 
 \RequirePackage{ctex}
-\RequirePackage{xeCJK}
 \RequirePackage{graphicx}
 \RequirePackage{color}
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
@@ -21,8 +20,9 @@
 \RequirePackage[superscript]{cite}
 \RequirePackage{enumerate}
 \RequirePackage{enumitem}
-\RequirePackage[most]{tcolorbox}
+\RequirePackage[breakable,most]{tcolorbox}
 \RequirePackage{pifont}
+\RequirePackage{pdfcol}
 
 \tcbset{listing engine=listings}
 \definecolor{backg}{RGB}{41,44,52}
@@ -48,12 +48,13 @@
 
 % 对列表类的设置
 \setlist[itemize]{label=\color[HTML]{F22F27}\large\textbullet,leftmargin=\parindent,topsep=0pt}
-\setlist[enumerate]{label=\color[HTML]{F22F27}\arabic*.,leftmargin=\parindent,topsep=0pt}
+\setlist[enumerate]{label=\color[HTML]{F22F27}\bfseries\arabic*.,leftmargin=\parindent,topsep=0pt}
 \setlist[description]{font=\color[HTML]{F22F27}\bfseries,leftmargin=\parindent,topsep=0pt,style=nextline}
 
 \newtcolorbox{block}[1]{enhanced,colback=red!10!white,colframe=red!10!white,coltitle=red!100!white,fonttitle=\vspace{2pt}\bfseries\zihao{-4},title=\ding{74} #1}
 \newtcblisting{cpp}{%
     listing only,
+    breakable,
     enhanced,
     colframe=white,
     colback=backg,
@@ -62,7 +63,7 @@
 }
 % 代码块样式设置
 \lstset{
-    basicstyle          =   \color{white}\code,
+    basicstyle          =   \addfontfeature{Color=ADB2BE}\color[RGB]{173,178,190}\code,
     keywordstyle        =   \bfseries,
     commentstyle        =   \rmfamily\itshape,
     stringstyle         =   \code,
@@ -76,14 +77,14 @@
 }
 \lstdefinestyle{C++}{
     language        =   [11]C++,
-    basicstyle      =   \zihao{-5}\code\color[RGB]{173,178,190},
+    basicstyle      =   \zihao{-5}\code\addfontfeature{Color=ADB2BE}\color[RGB]{173,178,190},
     numberstyle     =   \zihao{-5}\code\color[RGB]{173,178,190},
     keywordstyle    =   \color[RGB]{187,121,218},
     keywordstyle    =   [2] \color{teal},
     stringstyle     =   \color[RGB]{161,195,125},
     commentstyle    =   \color{red}\code,
     commentstyle    =   \color{olive},
-    rulesepcolor    =   \color{red!20!green!20!blue!20},
+    rulecolor       =   \color[RGB]{173,178,190}\addfontfeature{Color=ADB2BE},
     breaklines      =   true,
     tabsize         =   4,
     columns         =   fixed,
