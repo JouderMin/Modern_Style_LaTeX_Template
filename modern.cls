@@ -1,16 +1,14 @@
 \LoadClass[fontset=none]{article}
 
 \RequirePackage{ctex}
-\RequirePackage{xeCJK}
+%\RequirePackage{xeCJK}
 \RequirePackage{graphicx}
 \RequirePackage{color}
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
 \RequirePackage{fancyhdr}
 \RequirePackage{geometry}
-\RequirePackage{amsmath}
 \RequirePackage{mathtools}
-\RequirePackage[OT1,euler-digits,euler-hat-accent]{eulervm}
-\RequirePackage{fontspec}
+\RequirePackage{amsmath}
 \RequirePackage{multirow}
 \RequirePackage{listings}
 \RequirePackage{titlesec}
@@ -24,6 +22,25 @@
 \RequirePackage[breakable,most]{tcolorbox}
 \RequirePackage{pifont}
 \RequirePackage{pdfcol}
+\RequirePackage{fontspec}
+\RequirePackage{amsfonts}
+\RequirePackage{amsthm}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\RequirePackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+\RequirePackage{pstricks}
+\RequirePackage{import}
+
+\newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
+\newenvironment{nproof}{\begin{proof}[\indent\bf 证明]}{\end{proof}}
+\renewcommand{\qedsymbol}{}
+\renewcommand{\d}{\mathrm{d}}
+
+\tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
+\pgfplotsset{compat=1.8}
+\newcommand{\vasymptote}[2][]{
+    \draw [smooth,thick,magenta,#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
+}
 
 \tcbset{listing engine=listings}
 \definecolor{backg}{RGB}{41,44,52}
@@ -34,14 +51,15 @@
 % 在这里设置你所要的字体
 \newfontfamily{\code}{Fira Code Retina}
 \setCJKmainfont{思源黑体}
-\setmainfont{Source Han Sans SC}
+\setmainfont{STIXTwoText-Regular}
+\setmathfont{STIXTwoMath-Regular.otf}
 
 % 重定义的强调命令
 \renewcommand{\emph}[1]{\color[HTML]{F22F27}\textbf{#1}\color{black}}
 \newcommand{\spare}{\begin{center}\color[RGB]{231,231,231}\rule{\textwidth}{1.5pt}\end{center}}
 % 标题格式
-\titleformat{\section}[block]{\centering\zihao{1}\bfseries\color[HTML]{590009}}{\thesection\,\,}{0em}{}[]
-\titleformat{\subsection}[block]{\zihao{2}\bfseries}{\color[HTML]{F22F27}{\#}\,\color{black}\thesubsection\,\,}{0em}{}[\color{red}\hrule]
+\titleformat{\section}[block]{\centering\zihao{1}\bfseries\color[HTML]{590009}}{}{0em}{}[]
+\titleformat{\subsection}[block]{\zihao{2}\bfseries}{{\setmainfont{Source Han Sans SC}\color[HTML]{F22F27}\bfseries{\#}}\,\color{black}\thesubsection\,\,}{0em}{}[\color{red}\hrule]
 \titleformat{\subsubsection}[block]{\zihao{3}\bfseries}{\color[HTML]{F22F27}\rule[-4pt]{3pt}{20pt}\,\,\color{black}\thesubsubsection\,\,}{0em}{}[]
 
 % 段间距
