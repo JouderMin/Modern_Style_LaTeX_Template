@@ -49,10 +49,17 @@
 \geometry{a4paper,left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
 
 % 在这里设置你所要的字体
-\newfontfamily{\code}{Fira Code Retina}
-\setCJKmainfont{思源黑体}
-\setmainfont{STIXTwoText-Regular}
-\setmathfont{STIXTwoMath-Regular.otf}
+\newfontfamily{\code}[Path=./font/FiraCode/]{FiraCode-Retina.ttf}
+\setCJKmainfont[Path=./font/SourceHanSans/,
+Extension = {.ttf},
+UprightFont = {*17},
+BoldFont = {*32}]{SourceHanSans}
+\setmainfont[Path=./font/STIX2/,
+Extension = {.otf},
+UprightFont = {*-Regular}, ItalicFont = {*-Italic},
+BoldFont = {*-Bold}, BoldItalicFont = {*-BoldItalic},
+]{STIXTwoText}
+\setmathfont[Path=./font/STIX2/]{STIXTwoMath-Regular.otf}
 
 % 重定义的强调命令
 \renewcommand{\emph}[1]{\color[HTML]{F22F27}\textbf{#1}\color{black}}
@@ -98,11 +105,8 @@
     language        =   [11]C++,
     basicstyle      =   \zihao{-5}\code\addfontfeature{Color=ADB2BE}\color[RGB]{173,178,190},
     numberstyle     =   \zihao{-5}\code\color[RGB]{173,178,190},
-    keywordstyle    =   \color[RGB]{187,121,218},
-    keywordstyle    =   [2] \color{teal},
-    stringstyle     =   \color[RGB]{161,195,125},
-    commentstyle    =   \color{red}\code,
-    commentstyle    =   \color{olive},
+    keywordstyle    =   \color[RGB]{187,121,218}\addfontfeature{Color=BB79DA},
+    stringstyle     =   \color[RGB]{161,195,125}\addfontfeature{Color=A1C37D},
     rulecolor       =   \color[RGB]{173,178,190}\addfontfeature{Color=ADB2BE},
     breaklines      =   true,
     tabsize         =   4,
@@ -121,7 +125,7 @@
     array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
     random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
     uniform_int_distribution,iterator,algorithm,functional,bing,numeric,},
-    emphstyle       =   \color[RGB]{220,193,128}
+    emphstyle       =   \color[RGB]{220,193,128}\addfontfeature{Color=DCC180}
 }
 
 \zihao{5}
