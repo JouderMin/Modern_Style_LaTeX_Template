@@ -1,7 +1,6 @@
-\LoadClass[fontset=none]{article}
+\LoadClass{article}
 
-\RequirePackage{ctex}
-%\RequirePackage{xeCJK}
+\RequirePackage[fontset=none]{ctex}
 \RequirePackage{graphicx}
 \RequirePackage{color}
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
@@ -21,7 +20,6 @@
 \RequirePackage{enumitem}
 \RequirePackage[breakable,most]{tcolorbox}
 \RequirePackage{pifont}
-\RequirePackage{pdfcol}
 \RequirePackage{fontspec}
 \RequirePackage{amsfonts}
 \RequirePackage{amsthm}
@@ -30,7 +28,10 @@
 \RequirePackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
 \RequirePackage{pstricks}
 \RequirePackage{import}
+\RequirePackage{circuitikz}
+\RequirePackage{siunitx}
 
+\everymath{\displaystyle}
 \newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
 \newenvironment{nproof}{\begin{proof}[\indent\bf 证明]}{\end{proof}}
 \renewcommand{\qedsymbol}{}
