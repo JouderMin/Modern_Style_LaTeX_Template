@@ -4,6 +4,8 @@
 
 本项目为JouderMin的个人兴趣项目，用于快速记录课堂笔记，有随时的断更可能。
 
+本项目是对Theigrams的My-Typora-Themes的LaTeX实现，项目地址[Theigrams/My-Typora-Themes](https://github.com/Theigrams/My-Typora-Themes)
+
 ## 编译
 
 ### Windows
@@ -56,12 +58,10 @@
 
 ## 鸣谢
 
-本项目是对Theigrams的My-Typora-Themes的LaTeX实现，项目地址[Theigrams/My-Typora-Themes](https://github.com/Theigrams/My-Typora-Themes)
+感谢我的好朋友[ReekyStive](https://github.com/ReekyStive)，他为我的项目提出了许多宝贵的意见。
 
 本项目使用的开源字体
 
 * [tonsky/FiraCode](https://github.com/tonsky/FiraCode)
 * [adobe-fonts/source-han-sans](https://github.com/adobe-fonts/source-han-sans)
 * [stipub/stixfonts](https://github.com/stipub/stixfonts)
-
-以及我的好朋友[ReekyStive](https://github.com/ReekyStive)，他为我的项目提出了许多宝贵的意见。
