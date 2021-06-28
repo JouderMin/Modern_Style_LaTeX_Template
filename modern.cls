@@ -25,7 +25,7 @@
 \RequirePackage{amsthm}
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}
-\RequirePackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+\RequirePackage[warnings-off={mathtools-colon,mathtools-overbracket},math-style=ISO]{unicode-math}
 \RequirePackage{pstricks}
 \RequirePackage{import}
 \RequirePackage{circuitikz}
