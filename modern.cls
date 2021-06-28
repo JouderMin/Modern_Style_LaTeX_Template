@@ -67,7 +67,10 @@ BoldFont = {*-Bold}, BoldItalicFont = {*-BoldItalic},
 \newcommand{\spare}{\begin{center}\color[RGB]{231,231,231}\rule{\textwidth}{1.5pt}\end{center}}
 % 标题格式
 \titleformat{\section}[block]{\centering\zihao{1}\bfseries\color[HTML]{590009}}{}{0em}{}[]
-\titleformat{\subsection}[block]{\zihao{2}\bfseries}{{\setmainfont{Source Han Sans SC}\color[HTML]{F22F27}\bfseries{\#}}\,\color{black}\thesubsection\,\,}{0em}{}[\color{red}\hrule]
+\titleformat{\subsection}[block]{\zihao{2}\bfseries}{{\setCJKmainfont[Path=./font/SourceHanSans/,
+Extension = {.ttf},
+UprightFont = {*17},
+BoldFont = {*32}]{SourceHanSans}\color[HTML]{F22F27}\bfseries{\#}}\,\color{black}\thesubsection\,\,}{0em}{}[\color{red}\hrule]
 \titleformat{\subsubsection}[block]{\zihao{3}\bfseries}{\color[HTML]{F22F27}\rule[-4pt]{3pt}{20pt}\,\,\color{black}\thesubsubsection\,\,}{0em}{}[]
 
 % 段间距
