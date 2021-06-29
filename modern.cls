@@ -1,6 +1,6 @@
 \LoadClass{article}
 
-\RequirePackage[fontset=none]{ctex}
+\RequirePackage[fontset=none,punct=kaiming]{ctex}
 \RequirePackage{graphicx}
 \RequirePackage{color}
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
@@ -13,7 +13,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{setspace}
 \RequirePackage{mathdots}
-\RequirePackage{url}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{abstract}
 \RequirePackage[superscript]{cite}
 \RequirePackage{enumerate}
@@ -30,12 +30,14 @@
 \RequirePackage{import}
 \RequirePackage{circuitikz}
 \RequirePackage{siunitx}
+\RequirePackage{xfrac}
+\RequirePackage{floot}
 
-\everymath{\displaystyle}
+%\everymath{\displaystyle}
 \newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
 \newenvironment{nproof}{\begin{proof}[\indent\bf 证明]}{\end{proof}}
 \renewcommand{\qedsymbol}{}
-\renewcommand{\d}{\mathrm{d}}
+\DeclareMathOperator\diff{d\!}
 
 \tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
 \pgfplotsset{compat=1.8}
@@ -75,6 +77,9 @@ BoldFont = {*32}]{SourceHanSans}\color[HTML]{F22F27}\bfseries{\#}}\,\color{black
 
 % 段间距
 \setlength{\parskip}{1em}
+
+% 行间距
+\linespread{1.3}
 
 % 对列表类的设置
 \setlist[itemize]{label=\color[HTML]{F22F27}\large\textbullet,leftmargin=\parindent,topsep=0pt}
