@@ -65,3 +65,8 @@
 * [tonsky/FiraCode](https://github.com/tonsky/FiraCode)
 * [adobe-fonts/source-han-sans](https://github.com/adobe-fonts/source-han-sans)
 * [stipub/stixfonts](https://github.com/stipub/stixfonts)
+
+## 2021/06/30更新日志
+
+* 修复了``float``宏包导入错误
+* 增加了斜平行号，可以在数学模式通过``\varparallel``来调用

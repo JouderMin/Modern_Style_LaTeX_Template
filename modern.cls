@@ -31,13 +31,14 @@
 \RequirePackage{circuitikz}
 \RequirePackage{siunitx}
 \RequirePackage{xfrac}
-\RequirePackage{floot}
+\RequirePackage{float}
 
 %\everymath{\displaystyle}
 \newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
 \newenvironment{nproof}{\begin{proof}[\indent\bf 证明]}{\end{proof}}
 \renewcommand{\qedsymbol}{}
 \DeclareMathOperator\diff{d\!}
+\DeclareMathOperator\varparallel{\symbol{"2AFD}}
 
 \tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
 \pgfplotsset{compat=1.8}
