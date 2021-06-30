@@ -66,7 +66,13 @@
 * [adobe-fonts/source-han-sans](https://github.com/adobe-fonts/source-han-sans)
 * [stipub/stixfonts](https://github.com/stipub/stixfonts)
 
-## 2021/06/30更新日志
+## 2021/06/30更新日志 #1
 
 * 修复了``float``宏包导入错误
 * 增加了斜平行号，可以在数学模式通过``\varparallel``来调用
+
+## 2021/06/30更新日志 #2
+
+* 增加了用于排版题目的环境``exercise``
+* 引入``ntheorem``宏包作为新的定理环境
+* 调整了宏包加载的顺序

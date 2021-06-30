@@ -1,13 +1,14 @@
 \LoadClass{article}
 
+\RequirePackage{amsmath}
+\RequirePackage{mathtools}
+\RequirePackage[amsmath,amsthm]{ntheorem}
 \RequirePackage[fontset=none,punct=kaiming]{ctex}
 \RequirePackage{graphicx}
 \RequirePackage{color}
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
 \RequirePackage{fancyhdr}
 \RequirePackage{geometry}
-\RequirePackage{mathtools}
-\RequirePackage{amsmath}
 \RequirePackage{multirow}
 \RequirePackage{listings}
 \RequirePackage{titlesec}
@@ -22,20 +23,22 @@
 \RequirePackage{pifont}
 \RequirePackage{fontspec}
 \RequirePackage{amsfonts}
-\RequirePackage{amsthm}
+\RequirePackage{thmtools}
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}
 \RequirePackage[warnings-off={mathtools-colon,mathtools-overbracket},math-style=ISO]{unicode-math}
 \RequirePackage{pstricks}
 \RequirePackage{import}
 \RequirePackage{circuitikz}
-\RequirePackage{siunitx}
+\RequirePackage[per-mode=symbol]{siunitx}
 \RequirePackage{xfrac}
 \RequirePackage{float}
 
 %\everymath{\displaystyle}
-\newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
-\newenvironment{nproof}{\begin{proof}[\indent\bf 证明]}{\end{proof}}
+\theoremstyle{break}
+\newenvironment{solution}{\noindent{\bf 解}}{}
+\newenvironment{nproof}{\noindent{\bf 证明}}{}
+\newenvironment{exercise}[1]{\indent\emph{题#1}\quad}{}
 \renewcommand{\qedsymbol}{}
 \DeclareMathOperator\diff{d\!}
 \DeclareMathOperator\varparallel{\symbol{"2AFD}}
