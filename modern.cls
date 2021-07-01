@@ -2,7 +2,7 @@
 
 \RequirePackage{amsmath}
 \RequirePackage{mathtools}
-\RequirePackage[amsmath,amsthm]{ntheorem}
+\RequirePackage{amsthm}
 \RequirePackage[fontset=none,punct=kaiming]{ctex}
 \RequirePackage{graphicx}
 \RequirePackage{color}
@@ -35,13 +35,18 @@
 \RequirePackage{float}
 
 %\everymath{\displaystyle}
-\theoremstyle{break}
 \newenvironment{solution}{\noindent{\bf 解}}{}
 \newenvironment{nproof}{\noindent{\bf 证明}}{}
-\newenvironment{exercise}[1]{\indent\emph{题#1}\quad}{}
+\newenvironment{exercise}[1]{\noindent\emph{题#1}\quad}{}
 \renewcommand{\qedsymbol}{}
 \DeclareMathOperator\diff{d\!}
 \DeclareMathOperator\varparallel{\symbol{"2AFD}}
+
+\newtheorem{theorem}{\indent 定理}[section]
+\newtheorem{lemma}[theorem]{\indent 引理}
+\newtheorem{proposition}[theorem]{\indent 命题}
+\newtheorem{corollary}[theorem]{\indent 推论}
+\newtheorem{definition}{\indent 定义}[section]
 
 \tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
 \pgfplotsset{compat=1.8}
